@@ -127,25 +127,25 @@ nous pourrions avoir la sortie suivante :
 
 ```
 1. données : "←"
-    1 |entrée : liste : tableau de n éléments
-    2 |sortie : trié : booléen
+    1 | entrée : liste : tableau de n éléments
+    2 | sortie : trié : booléen
 2. variables :
-    1 |i : entier
-    2 |croissant : booléen
-    3 |décroissant : booléen
+    1 | i : entier
+    2 | croissant : booléen
+    3 | décroissant : booléen
 3. début
-    1 |croissant ← Vrai
-    2 |décroissant ← Vrai
-    3 |pour i de 1 à |liste| - 1 faire
-    4 |    si liste[i] < liste[i - 1] alors
-    5 |        croissant ← faux
-    6 |    fin si
-    7 |    si liste[i] > liste[i - 1] alors
-    8 |        décroissant ← faux
-    9 |    fin si
-   10 |fin pour
-   11 |trié ← croissant \/ décroissant
-   12 |affiche(trié)
+    1 | croissant ← Vrai
+    2 | décroissant ← Vrai
+    3 | pour i de 1 à |liste| - 1 faire
+    4 |     si liste[i] < liste[i - 1] alors
+    5 |         croissant ← faux
+    6 |     fin si
+    7 |     si liste[i] > liste[i - 1] alors
+    8 |         décroissant ← faux
+    9 |     fin si
+   10 | fin pour
+   11 | trié ← croissant \/ décroissant
+   12 | affiche(trié)
 4. fin
 ```
 
@@ -173,3 +173,4 @@ nous pourrions avoir la sortie suivante :
     9 | fin pour
 4. fin
 ```
+
