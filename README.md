@@ -51,7 +51,7 @@
 
 ---
 
-### Exercice choisis : [19, 20, 21, 22, 23, 24, 25, 31, 32]
+### Exercice choisis : [19, 20, 21, 22, 23, 25, 31, 32]
 
 ---
 
@@ -173,5 +173,6 @@ nous pourrions avoir la sortie suivante :
     9 | fin pour
 4. fin
 ```
+
 
 
