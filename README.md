@@ -265,6 +265,9 @@ un entier naturel p, il n’existe pas d’entier entre 2 et p − 1 divisant p)
    11 |     fin tant que
    12 |     si i > ⌊racine(p)⌋ alors
    13 |         resultat ← vrai
+   14 |     fin si
+   15 | fin sinon
+   16 | affiche(resultat)
 3. fin
 ```
 
@@ -300,4 +303,5 @@ valeurs réelles et x une inconnue :(...)
 ```
 
 ---
+
 
