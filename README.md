@@ -16,7 +16,7 @@
 ### Récapitulatif
 
 * Max 8 exercices
-* Actuel 5 exo = 12.0p
+* Actuel 8 exo = 12.0p
 * 0 de x x - facile (0.8 point).
 * 3 de x x x - moyen (1.2 point).
 * 4 de x x x x - difficile (1.6 point).
@@ -300,3 +300,4 @@ valeurs réelles et x une inconnue :(...)
 ```
 
 ---
+
