@@ -156,11 +156,11 @@ nous pourrions avoir la sortie suivante :
 
 ```
 1. données :
-    entrée : liste : tableau de n éléments
-    sortie : liste : tableau de n éléments triés (ordre croissant)
+    1 | entrée : liste : tableau de n éléments
+    2 | sortie : liste : tableau de n éléments triés (ordre croissant)
 2. variables :
-    i, j : entiers
-    tmp : élément
+    1 | i, j : entiers
+    2 | tmp : élément
 3. début
     1 | pour i ← 0 à |liste| − 2 faire
     2 |     pour j ← i + 1 à |liste| − 1 faire
@@ -173,4 +173,5 @@ nous pourrions avoir la sortie suivante :
     9 | fin pour
 4. fin
 ```
+
 
