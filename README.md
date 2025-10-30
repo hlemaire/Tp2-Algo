@@ -16,11 +16,11 @@
 ### Récapitulatif
 
 * Max 8 exercices
-* Actuel 3 exo = 4.0p
+* Actuel 5 exo = 12.0p
 * 0 de x x - facile (0.8 point).
-* 2 de x x x - moyen (1.2 point).
-* 1 de x x x x - difficile (1.6 point).
-* 0 de x x x x x - challenge (2 points).
+* 3 de x x x - moyen (1.2 point).
+* 4 de x x x x - difficile (1.6 point).
+* 1 de x x x x x - challenge (2 points).
 
 ---
 
@@ -51,7 +51,7 @@
 
 ---
 
-### Exercice choisis : [19, 20, 21, 22, 23, 25, 31, 32]
+### Exercice choisis : [19, 20, 21, 22, 23, 25, 29, 31]
 
 ---
 
@@ -155,7 +155,7 @@ nous pourrions avoir la sortie suivante :
 Écrire un algorithme de tri d’un tableau (reprendre par exemple la méthode proposée en activité introductive).
 
 ```
-1. données :
+1. données : "←"
     1 | entrée : liste : tableau de n éléments
     2 | sortie : liste : tableau de n éléments triés (ordre croissant)
 2. variables :
@@ -174,5 +174,129 @@ nous pourrions avoir la sortie suivante :
 4. fin
 ```
 
+---
 
+### Exercice 23 (x x x x Calcul de médiane). = 1.6p
+Bob souhaite calculer la médiane d’une liste de valeurs. Écrire un algorithme qui
+prend en entrée un tableau de nombres et renvoie la médiane de ces nombres.
+Charlie vous informe que calculer une médiane peut être trivial si vous avez une
+liste triée de valeurs.
 
+```
+1. données : "←"
+    1 | entrée : liste : tableau de n éléments
+    2 | sortie : médiane : nombre
+2. variables :
+    1 | i, j : entier
+    2 | tmp : élément
+    3 | médiane : nombre
+3. début
+    1 | pour i ← 0 à |liste| − 2 faire
+    2 |     pour j ← i + 1 à |liste| − 1 faire
+    3 |         si liste[j] < liste[i] alors
+    4 |             tmp ← liste[i]
+    5 |             liste[i] ← liste[j]
+    6 |             liste[j] ← tmp
+    7 |         fin si
+    8 |     fin pour
+    9 | fin pour
+   10 | si |liste| mod 2 = 1 alors
+   11 |     médiane ← liste[|liste| div 2]
+   12 | sinon
+   13 |     médiane ← (liste[|liste| div 2 − 1] + liste[|liste| div 2]) / 2
+   14 | fin si
+   15 | affiche("La médiane est :", médiane)
+4. fin
+```
+
+---
+
+### Exercice 25 (x x x x x Suite de Fibonacci généralisée). = 2.0p
+Oscar s’intéresse à la généralisation de la suite de Fibonacci. Il a découvert la suite
+de Tribonacci, la suite de Tétranacci et qu’elles semblent se généraliser. Il vous
+indique que les suites énoncées peuvent s’écrire pour tout entier positif n par les
+relations suivantes :
+
+* Proposer un algorithme qui pour un degré d donné et un indice n calcule la suite de Fibonacci généralisée.
+
+```
+1. données : "←"
+    1 | entrée : d : entier
+    2 | entrée : liste : tableau
+    3 | entrée : n : entier
+2. variables :
+    1 | i, j : entier
+    2 | tmp : entier
+3. début
+    1 | pour i ← d à n faire
+    2 |     tmp ← 0
+    3 |     pour j ← (i - d) à (i - 1) faire
+    4 |         tmp ← tmp + liste[j]
+    5 |     fin pour
+    6 |     liste[i] ← tmp
+    7 |     affiche(liste[i])
+    8 | fin pour
+    9 | affiche("Le terme n est :", liste[n])
+4. fin
+```
+
+---
+
+### Exercice 29 (x x x Crible d’Ératosthène). = 1.2p
+Écrire un fonction qui détermine si un entier donné est premier. Pour rappel, un
+entier est premier s’il n’est divisible que par 1 et lui-même (ceci veut dire que pour
+un entier naturel p, il n’existe pas d’entier entre 2 et p − 1 divisant p).
+
+```
+1. données :
+    1 | entrée : p : entier
+    2 | sortie : resultat : booléen
+2. début :
+    1 | si p < 2 alors
+    2 |     resultat ← faux
+    3 | sinon
+    4 |     i ← 2
+    5 |     tant que i ≤ ⌊racine(p)⌋ faire
+    6 |         si p mod i = 0 alors
+    7 |             resultat ← faux
+    8 |             arrêter
+    9 |         fin si
+   10 |        i ← i + 1
+   11 |     fin tant que
+   12 |     si i > ⌊racine(p)⌋ alors
+   13 |         resultat ← vrai
+3. fin
+```
+
+---
+
+### Exercice 31 (x x x x Racine carré méthode de Newton). = 1.6p
+Bob pensait que calculer une racine carré √ était quelque chose d’assez trivial. Cependant Charlie lui explique
+que la machine ne sait pas calculer naturellement une racine carré et que nous
+pouvons implémenter la méthode de Newton pour calculer une racine carré. C’est
+une méthode qui permet de résoudre l’équation suivante pour f une fonction à
+valeurs réelles et x une inconnue :(...)
+
+* Votre mission de proposer une fonction en pseudo-code qui calcule une racine carré par la méthode de Newton.
+
+```
+1. constantes :
+    1 | epsilon := 0.0001
+2. données : "←"
+    1 | entrée : alpha : réel
+    2 | sortie : racine : réel
+3. variables :
+    1 | z : réel
+    2 | y : réel
+4. début :
+    1 | z ← alpha / 2
+    2 | répéter
+    3 |     y ← (z + alpha / z) / 2
+    4 |     x ← y
+    5 | jusqu’à |z x z - alpha| < epsilon
+    6 | racine ← z
+    7 | affiche(racine)
+5. fin
+```
+
+---
